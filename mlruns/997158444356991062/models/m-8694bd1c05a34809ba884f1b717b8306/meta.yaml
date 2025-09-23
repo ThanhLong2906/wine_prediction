@@ -1,0 +1,10 @@
+artifact_location: file:///D:/ntl/Repositories_store/mlops-mini/mlruns/997158444356991062/models/m-8694bd1c05a34809ba884f1b717b8306/artifacts
+creation_timestamp: 1758458245248
+experiment_id: '997158444356991062'
+last_updated_timestamp: 1758458250458
+model_id: m-8694bd1c05a34809ba884f1b717b8306
+model_type: null
+name: linear_regression
+source_run_id: 001c48f8643e45a5b11819a23d4c16eb
+status: 2
+status_message: null

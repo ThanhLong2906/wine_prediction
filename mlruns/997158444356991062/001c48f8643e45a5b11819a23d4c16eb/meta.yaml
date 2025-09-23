@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/ntl/Repositories_store/mlops-mini/mlruns/997158444356991062/001c48f8643e45a5b11819a23d4c16eb/artifacts
+end_time: 1758458250474
+entry_point_name: ''
+experiment_id: '997158444356991062'
+lifecycle_stage: active
+run_id: 001c48f8643e45a5b11819a23d4c16eb
+run_name: rare-tern-308
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758458245090
+status: 3
+tags: []
+user_id: THAI-CNTT

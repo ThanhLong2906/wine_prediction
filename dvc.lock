@@ -1,0 +1,31 @@
+schema: '2.0'
+stages:
+  generate:
+    cmd: python src/generate_data.py
+    deps:
+    - path: src/generate_data.py
+      hash: md5
+      md5: 40cc0f5122ac5bfd1ed6e868145cb369
+      size: 889
+    outs:
+    - path: data/prices.csv
+      hash: md5
+      md5: 5d024f902b9d5090340a353fd8664adb
+      size: 14377
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/prices.csv
+      hash: md5
+      md5: 5d024f902b9d5090340a353fd8664adb
+      size: 14377
+    - path: src/train.py
+      hash: md5
+      md5: e7d6c9b5fe785c4085a469b3d00bfd36
+      size: 1097
+    outs:
+    - path: model/
+      hash: md5
+      md5: 60b2b1615f2dad0148b723175d90445d.dir
+      size: 881
+      nfiles: 1
