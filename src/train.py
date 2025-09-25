@@ -7,7 +7,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-
 def load_data(path="data/prices.csv"):
     df = pd.read_csv(path)
     X = df[["size", "color", "freshness"]]  # giả định các feature
@@ -23,7 +22,8 @@ def train():
 
     preds = model.predict(X_test)
     mse = mean_squared_error(y_test, preds)
-
+    mlflow.set_tracking_uri("file:./mlruns")
+    
     # log với MLflow
     mlflow.log_metric("mse", mse)
     mlflow.sklearn.log_model(model, "linear_regression")
