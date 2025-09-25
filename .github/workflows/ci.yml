@@ -14,11 +14,16 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install deps
-        run: pip install -r requirements.txt
+      # 3. Cài dependencies
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install dvc[all] mlflow
 
-      - name: Run training
-        run: python src/train.py
+      # 4. Chạy pipeline DVC (train model)
+      - name: Run DVC pipeline
+        run: |
+          dvc repro
 
       # 5. Upload model.pkl (nếu bạn lưu model riêng)
       - name: Upload trained model
