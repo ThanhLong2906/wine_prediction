@@ -23,10 +23,10 @@ def train():
     preds = model.predict(X_test)
     mse = mean_squared_error(y_test, preds)
     mlflow.set_tracking_uri("file:./mlruns")
-    
+
     # log với MLflow
     mlflow.log_metric("mse", mse)
-    mlflow.sklearn.log_model(model, "linear_regression")
+    mlflow.sklearn.log_model(model, name = "linear_regression")
 
     # lưu model ra thư mục model/
     os.makedirs("model", exist_ok=True)
