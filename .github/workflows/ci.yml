@@ -19,3 +19,17 @@ jobs:
 
       - name: Run training
         run: python src/train.py
+
+      # 5. Upload model.pkl (nếu bạn lưu model riêng)
+      - name: Upload trained model
+        uses: actions/upload-artifact@v2
+        with:
+          name: trained-model
+          path: model/model.pkl
+
+      # 6. Upload toàn bộ mlruns (MLflow artifacts)
+      - name: Upload MLflow artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: mlflow-artifacts
+          path: mlruns
